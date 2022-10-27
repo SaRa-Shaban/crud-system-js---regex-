@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class=" w-50 m-auto p-5 shadow-lg">
+
+        <h1>CRUD SYSTEM</h1>
+
+        <label>Product Name:</label>
+        <input type="text" class="form-control" id="ProductName">
+        <div class=" alert alert-danger mt-2 d-none" id="divNameProductAlert"> 
+            <p class=" my-0">please starty with capital letter</p>
+        </div>
+
+        <label>Product Category:</label>
+        <input type="text" class="form-control" id="ProductCategory">
+
+        <label>Product Price:</label>
+        <input type="number" class="form-control" id="ProductPrice">
+
+        <label>Product Description:</label>
+        <textarea class="form-control mb-4" id="ProductDescription"></textarea>
+        <div class=" alert alert-danger mt-2 d-none" id="divAllAlert"> 
+            <p class=" my-0">please write data in all fields</p>
+        </div>
+
+
+        <button onclick=" createAndUpdate()  " class="btn btn-outline-success" id="addProduct">add product</button>
+
+
+
+        <button class="btn btn-outline-success" onclick="clearPeoduct(); ">add clear</button>
+
+
+
+
+
+
+    </div>
+
+
+    <input type="text" placeholder="search...."  onkeyup="search()" id = 'productSearch' class="form-control mt-4 w-25 m-auto">
+
+<!-- <input type="text" placeholder="search...."  oninput="search2(this.value)"   class="form-control mt-4 w-25 m-auto" id="search-input"> -->
+
+
+
+
+    <table class="table w-75 m-auto mt-5 text-center table-striped">
+        <thead>
+            <th>index</th>
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>description</th>
+            <th>update</th>
+            <th>delete</th>
+
+        </thead>
+        <tbody id="tBody">
+
+
+        </tbody>
+    </table>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
